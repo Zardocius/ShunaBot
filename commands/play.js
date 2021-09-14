@@ -1,7 +1,6 @@
 const { joinVoiceChannel, createAudioPlayer,createAudioResource, StreamType, AudioPlayerStatus, AudioPlayer } = require('@discordjs/voice');
 const { SlashCommandBuilder} = require('@discordjs/builders');
 const ytdl = require('ytdl-core');
-const spdl = require('spdl-core')
 const ytsr = require('ytsr');
 const fs = require('fs');
 
@@ -39,23 +38,18 @@ module.exports = {
 
         }
 
-
-        	/*
          if (ytdl.validateURL(input)) {
             // link to function
 
             await playit(input)
+        }
 
-        } else {
+        else
+        {
 			// ytsr search 
 			const searchResults = await ytsr(input, { limit: 1 }, {type: 'video' });
             const rawlink = searchResults.items[0].url
-            await playit(rawlink)
-            */
-
-
-    
+            await playit(rawlink)   
+        }
     }
 }
-
-
